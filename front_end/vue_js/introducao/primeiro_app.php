@@ -7,14 +7,19 @@
         <title>Curso de VueJS (UDEMY)</title>
     </head>
     <style>
-        #app{margin-top: 150px; display:flex; align-items: center;}        
+        #vue_app{display:flex; align-items: center; justify-content: center;}
+        #vue_app #app{margin-top: 150px;}        
+        #vue_app #app input{margin-bottom: 10px; width: 100%}        
     </style>
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-6 offset-md-3" id="vue_app">
                     <div id="app">
-                        <input type="text" v-on:input="alterarTitulo">
+                        <div class="form-group mb-3">                            
+                            <label for="text">Título</label>
+                            <input type="text" id="text" class="form-control" name="text" placeholder="Digite algo e veja a mágica" v-on:input="alterarTitulo">
+                        </div>
                         <h1>{{ titulo }}</h1>
                     </div>
                 </div>
