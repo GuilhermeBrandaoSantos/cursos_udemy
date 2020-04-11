@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Curso de VueJS 2º Módulo)</title>
+    </head>
+    <style>
+        #vue_app{display:flex; align-items: center; justify-content: center;}
+        #vue_app #app{margin-top: 150px;}        
+        #vue_app #app input{margin-bottom: 10px; width: 100%}        
+    </style>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3" id="vue_app">
+                    <div id="app">                        
+                        <h1>{{ titulo }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    titulo: 'Hello world!!!'
+                }
+            });
+
+        </script>
+    </body>
+</html>
