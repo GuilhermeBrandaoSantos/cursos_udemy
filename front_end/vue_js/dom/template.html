@@ -7,6 +7,7 @@
         <title>Curso de VueJS 2º Módulo)</title>
     </head>
     <style>
+        .container {text-align: center;}
         #vue_app{display:flex; align-items: center; justify-content: center;}
         #vue_app #app{margin-top: 150px;}        
         #vue_app #app input{margin-bottom: 10px; width: 100%}        
@@ -16,7 +17,9 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3" id="vue_app">
                     <div id="app">                        
-                        <h1>{{ titulo }}</h1>
+                        <h1>{{ titulo }}</h1>          
+                        <h2>Acesse -> <a :href="link" target="_blank">Meu GitHub</a></h2>
+                        <h3>{{ saudacao() }}</h3>
                     </div>
                 </div>
             </div>
@@ -30,7 +33,13 @@
             new Vue({
                 el: '#app',
                 data: {
-                    titulo: 'Hello world!!!'
+                    titulo: 'Curso VueJS',
+                    link: 'https://github.com/GuilhermeBrandaoSantos'
+                },
+                methods: {
+                    saudacao: function(){                        
+                        return 'Boa semana!'                        
+                    }
                 }
             });
 
