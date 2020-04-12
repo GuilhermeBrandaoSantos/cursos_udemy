@@ -26,6 +26,11 @@
                             Posição do mouse: {{ x }} e {{ y }}
                             <span  v-on:mousemove.stop.prevent="">Parar evento aqui!!!</span>
                         </p>
+                        <hr>
+                        <div class="form-group mb-3">                            
+                            <label for="text">Modificardor de evento keyup:</label>
+                            <input type="text" id="text" class="form-control" name="text" v-on:keyup.enter="alerta">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,6 +55,9 @@
                     atualizaXY(event){
                         this.x = event.clientX,
                         this.y = event.clientY
+                    },
+                    alerta(){
+                        alert('Estou de vendo, safado!!!')
                     }
                 }
             });
