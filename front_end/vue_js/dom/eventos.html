@@ -11,7 +11,8 @@
         #vue_app #app{margin-top: 150px;}        
         #vue_app #app input{margin-bottom: 10px; width: 100%}
         #botao{margin: 0 auto; display: block;}
-        .center{text-align: center;}   
+        .center{text-align: center;}
+        p{font-size: 25px;}
     </style>
     <body>
         <div class="container">
@@ -21,7 +22,10 @@
                         <h1 class="center">{{ contador }}</h1>
                         <button id="botao" class="btn btn-primary" v-on:click="somar">Somar 1</button>
 
-                        <h2 class="center" v-on:mousemove="atualizaXY">Posição do mouse: {{ x }} e {{ y }}</h2>
+                        <p class="center" v-on:mousemove="atualizaXY">
+                            Posição do mouse: {{ x }} e {{ y }}
+                            <span  v-on:mousemove.stop.prevent="">Parar evento aqui!!!</span>
+                        </p>
                     </div>
                 </div>
             </div>
