@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Curso de VueJS 2º Módulo</title>
+    </head>
+    <style>
+        #app{display:flex; align-items: center; justify-content: space-around;}
+        #vue_app #app{margin-top: 150px;}        
+        .demo{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            display: flex;
+            justify-content: space-between;
+        } 
+
+        .c1{background-color: red;}
+        .c2{background-color: blue;}
+        .c3{background-color: green;} 
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="vue_app">
+                    <div id="app">
+                        <div class="demo" :class="{c1: aplicarC1}" @click="aplicarC1 = !aplicarC1"></div>
+                        <div class="demo" :class="{c2: aplicarC2}" @click="aplicarC2 = !aplicarC2"></div>
+                        <div class="demo" :class="{c3: aplicarC3}" @click="aplicarC3 = !aplicarC3"></div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data:{
+                    aplicarC1:false,
+                    aplicarC2:false,
+                    aplicarC3:false
+                }                             
+            });
+
+        </script>
+    </body>
+</html>
