@@ -40,10 +40,15 @@
                     contador: 0,
                     contador2: 0
                 },
+                watch: {
+                    contador(novo, antigo){
+                        setTimeout(()=>{
+                            this.contador = 0
+                        }, 2000)                      
+                    }
+                },
                 computed: {
                     resultado(){
-                        console.log('Chamou aqui');
-                        
                         return this.contador >=5 ? 'Maior ou igual a 5' : 'Menor que 5'
                     }
                 },
