@@ -8,7 +8,7 @@
     </head>
     <style>
         #vue_app{display:flex; align-items: center; justify-content: center;}
-        #vue_app #app{margin-top: 150px;}        
+        #vue_app #app{margin-top: 150px; text-align: center;}        
         #vue_app #app input{margin-bottom: 10px; width: 100%}
         #botao{margin: 0 auto; display: block;}
         .center{text-align: center;}
@@ -19,12 +19,11 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3" id="vue_app">
                     <div id="app">                        
-                        <h1 class="center">{{ titulo }}</h1>                       
-                        
-                        <div class="form-group mb-3">                            
-                            <label for="text">Two-Way-Binding</label>
-                            <input type="text" id="text" class="form-control" name="text" v-model="titulo">
-                        </div>
+                         <button class="btn btn-primary" @click="aumentar">Aumentar</button>
+                         <button class="btn btn-primary" @click="contador2++">Outro Aumentar</button>
+                         <button class="btn btn-primary" @click="diminuir">Diminuir</button>
+                         <p>Contador: {{ contador }} | {{ contador2 }}</p>
+                         <p>Resultado: {{ resultado }}</p>                                               
                     </div>
                 </div>
             </div>
@@ -38,8 +37,24 @@
             new Vue({
                 el: '#app',
                 data: {
-                    titulo: 'Hello world!!!'
-                }           
+                    contador: 0,
+                    contador2: 0
+                },
+                computed: {
+                    resultado(){
+                        console.log('Chamou aqui');
+                        
+                        return this.contador >=5 ? 'Maior ou igual a 5' : 'Menor que 5'
+                    }
+                },
+                methods: {
+                    aumentar(){
+                        this.contador++
+                    },
+                    diminuir(){
+                        this.contador--
+                    }                    
+                }
             });
 
         </script>
