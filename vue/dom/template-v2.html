@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ titulo }}</p>
+  <input type="text" v-on:input='mostraNome'>
+  <p>{{ saudacao(nome) }}</p>
+  <a v-bind:href="link" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+        titulo: "Curso Vue JS",
+        nome: '',
+        link: 'https://github.com/GuilhermeBrandaoSantos'
+    },
+    methods: {
+        saudacao: function (name) {
+            return 'Boa semana ' + name + ' !!!'
+        },
+        mostraNome: function (event) {
+            this.nome = event.target.value;
+        }
+    },
+  });
+</script>
