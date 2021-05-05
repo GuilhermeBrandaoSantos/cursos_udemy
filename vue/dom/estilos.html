@@ -10,7 +10,7 @@
 </style>
 
 <div id="app">
-    <div class="demo" :class="{c1: aplicarC1}" @click="aplicarC1 = !aplicarC1"></div>
+    <div class="demo" :class="estilo1" @click="aplicarC1 = !aplicarC1"></div>
     <div class="demo"></div>
     <div class="demo"></div>
 </div>
@@ -20,7 +20,15 @@
         el: "#app",
         data: {
             aplicarC1: false
-        },      
+        },
+        computed:{
+            estilo1(){
+                return{
+                    c1: this.aplicarC1,
+                    c2: !this.aplicarC1
+                }
+            }
+        }     
     });
 
 </script>
