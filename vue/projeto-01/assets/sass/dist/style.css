@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*Score*/
+/*Resultados*/
+/*Botões*/
+/* Geral */
+html {
+  font-family: "Montserrat", "sans-serif";
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  /* Pontuação */
+  /* Resultado */
+  /*Botões*/
+}
+.panel.scores {
+  display: flex;
+}
+.panel.scores .score {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.panel.scores .score h1 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.panel.scores .score .life-bar {
+  width: 80%;
+  height: 20px;
+  border: 1px solid rgba(170, 170, 170, 0.637);
+}
+.panel.scores .score .life-bar .life {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: #4caf50;
+}
+.panel.scores .score .life-bar .life.danger {
+  background-color: #f44336;
+}
+.panel.result {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.panel.result .win {
+  color: #1b5e20;
+}
+.panel.result .lose {
+  color: #b71c1c;
+}
+.panel.buttons {
+  display: flex;
+  justify-content: center;
+}
+.panel.buttons .btn {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+.panel.buttons .btn.new-game {
+  transition: 0.11s;
+  color: #fff;
+  background-color: #ca61dc;
+  box-shadow: 0 4px #edc9f3;
+}
+.panel.buttons .btn.new-game:hover {
+  background-color: #89229b;
+}
+.panel.buttons .btn.new-game:active {
+  box-shadow: 0 2px #d176e1;
+  transform: translateY(2px);
+}
+.panel.buttons .btn.attack {
+  transition: 0.11s;
+  color: #fff;
+  background-color: #e55454;
+  box-shadow: 0 4px #f6c3c3;
+}
+.panel.buttons .btn.attack:hover {
+  background-color: #a11919;
+}
+.panel.buttons .btn.attack:active {
+  box-shadow: 0 2px #e86a6a;
+  transform: translateY(2px);
+}
+.panel.buttons .btn.especial-attack {
+  transition: 0.11s;
+  color: #fff;
+  background-color: #8591d5;
+  box-shadow: 0 4px #e4e7f6;
+}
+.panel.buttons .btn.especial-attack:hover {
+  background-color: #3849a2;
+}
+.panel.buttons .btn.especial-attack:active {
+  box-shadow: 0 2px #98a2db;
+  transform: translateY(2px);
+}
+.panel.buttons .btn.heal {
+  transition: 0.11s;
+  color: #fff;
+  background-color: #28adfd;
+  box-shadow: 0 4px #a6ddfe;
+}
+.panel.buttons .btn.heal:hover {
+  background-color: #0267a4;
+}
+.panel.buttons .btn.heal:active {
+  box-shadow: 0 2px #42b7fd;
+  transform: translateY(2px);
+}
+.panel.buttons .btn.give-up {
+  transition: 0.11s;
+  color: #fff;
+  background-color: #ff8c4d;
+  box-shadow: 0 4px #ffdecd;
+}
+.panel.buttons .btn.give-up:hover {
+  background-color: #cd4800;
+}
+.panel.buttons .btn.give-up:active {
+  box-shadow: 0 2px #ff9c67;
+  transform: translateY(2px);
+}
+.panel.logs ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.panel.logs ul li {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  padding: 3px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.panel.logs ul li.monster {
+  background-color: #f99d97;
+  color: #fff;
+}
+.panel.logs ul li.player {
+  background-color: #42b7fd;
+  color: #fff;
+}

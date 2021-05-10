@@ -1,0 +1,20 @@
+@mixin init-config{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin btn-config($btn-color) {
+    transition: .110s;
+    color: #fff;
+    background-color: lighten($color: $btn-color, $amount: 20%);
+    box-shadow: 0 4px lighten($color: $btn-color, $amount: 45%);;
+
+    &:hover {
+        background-color: darken($color: $btn-color, $amount: 5%);
+    }
+
+    &:active {
+        box-shadow: 0 2px lighten($color: $btn-color, $amount: 25%);
+        transform: translateY(2px);
+    }
+}
